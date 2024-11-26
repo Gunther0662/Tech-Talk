@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>The Tech Blog</title>
+  </head>
+
+  <body>
+    <nav>
+      <div>
+        <a href='/'>The Tech Blog</a>
+        <div id='navbarNav'>
+          <ul>
+            <li>
+              <a href='/'>Home</a>
+            </li>
+            <li>
+              <a href='/dashboard'>Dashboard</a>
+            </li>
+            {{#if logged_in}}
+              <li>
+                <a href='#' id='logout'>Logout</a>
+              </li>
+            {{else}}
+              <li>
+                <a href='/login'>Login</a>
+              </li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      {{#if dashboard}}
+        <h1><a href='/dashboard'>Your Dashboard</a></h1>
+      {{else}}
+        <h1><a href='/'>The Tech Blog</a></h1>
+      {{/if}}
+    </header>
+
+    <main>
+      {{{body}}}
+    </main>
+
+    {{#if dashboard}}
+      <footer>
+        <a href='/dashboard/new'>➕ New Post</a>
+      </footer>
+    {{/if}}
+
+    {{#if logged_in}}
+      <script src='/js/logout.js'></script>
+    {{/if}}
+  </body>
+</html>

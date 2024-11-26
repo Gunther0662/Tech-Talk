@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
-const { withApiAuth } = require('../../utils/auth')
+const { Post } = require('../models');
+const { withApiAuth } = require('../utils/auth')
 
 router.post('/', withApiAuth, async (req, res) => {
   const body = req.body

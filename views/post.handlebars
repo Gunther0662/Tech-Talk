@@ -1,0 +1,42 @@
+<div class="post">
+  <article>
+    <div>
+      <h2>{{post.title}}</h2>
+      <div>
+        Posted by {{post.user.username}} on {{format_date post.createdAt}}
+      </div>
+    </div>
+    <div>
+      {{post.body}}
+    </div>
+  </article>
+
+  {{#if post.comments}}
+  <section>
+    <div>
+      <h3>Comments</h3>
+    </div>
+    <div>
+      {{#each post.comments as |comment|}}
+      {{> comments}}
+      {{/each}}
+    </div>
+  </section>
+  {{/if}}
+
+  <form id="new-comment-form">
+    <div>
+      <h3>Add New Comment</h3>
+    </div>
+    <div>
+      <input type="hidden" name="post-id" value="{{post.id}}" />
+      <div>
+        <label for="comment-body">Comment</label>
+        <textarea name="comment-body"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+<script src="/js/comment.js"></script>
