@@ -2,7 +2,7 @@
 
 ## Description
 
-    This Application was created to give an opurtunity for Web developers to talk and write anything that comes in mind. Mindful that the app was created for cooders mindset an d help among each other. This application had trouble getting started and aobtainig the postgres and sequelize to make the application function. The functionality of this application is by using the postgres and sequelize to create seed data that shows in the application on the view side.  
+This Application was created to give an opurtunity for Web developers to talk and write anything that comes in mind. Mindful that the app was created for cooders mindset an d help among each other. This application had trouble getting started and aobtainig the postgres and sequelize to make the application function. The functionality of this application is by using the postgres and sequelize to create seed data that shows in the application on the view side.  
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ N/A
 
 ## Usage
 
-GitHub: 
+GitHub: https://github.com/Gunther0662/Tech-Talk
 
 ## Credits
 
